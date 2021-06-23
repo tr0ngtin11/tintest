@@ -71,8 +71,6 @@ header .menu ul li a:hover{
 
 header .sidabar-top{
     display: flex;
-    position:fixed;
-   right: 0;
 
 }
 header .sidabar-top a{
@@ -100,6 +98,7 @@ header .sidabar-top a:nth-child(1) span{
 
 
 }
+
 
 /* Slider */
 
@@ -139,7 +138,8 @@ header .sidabar-top a:nth-child(1) span{
 
  ul.product-list{
  display:flex;
- max-width: 100%;;
+ max-width: 100%;
+ flex-wrap: wrap;
 }
 
 ul.product-list li {
@@ -233,9 +233,356 @@ ul.product-list div.buy a:nth-child(3){
 padding: 50px 0px;
 margin-top: 60px;
 }
-.container ul li{
+.container ul.Ship li{
     text-align: center;
-    flex: 1;
+   width: 25%;
+}
+
+.container ul.Ship li h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.container ul.Ship li small {
+    color:#888;
+    font-size: 0.7rem;
 }
 
 
+/* Promotion*/
+
+#promotion{
+    background: #2e3348;
+}
+
+#promotion .container ul{
+    display: flex;
+    justify-content: space-between;
+
+}
+#promotion .container ul li {
+    width: 30%;
+    text-align: center;
+    display: block;
+    padding: 40px 0px;
+   
+    
+}
+#promotion .container ul li img{
+    width: 80%;
+   
+}
+
+#promotion .container ul li:nth-child(2){
+    background-color: #34394f;
+}
+
+#feature-product h2{
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+    margin-top: 60px;
+}
+
+#feature-product small{
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #3cb878;
+    margin-bottom: 50px;
+}
+
+#brands .discount{
+    background-image: url(/img/bgform.jpg);
+    background-color: #2b3042;
+    text-align: center;
+    background-size: cover;
+}
+
+.discount , .brand{
+    height: 250px;
+    width: 50%;
+}
+
+#brands .discount .text {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+#brands .discount .text h2{
+    color: #fff;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+#brands .discount .text p{
+    max-width: 400px;
+    color: #fff;
+    line-height: 25px;;
+    margin-bottom: 25px;
+}
+
+#brands .discount form input{
+    width: 300px;
+    padding: 5px;
+}
+#brands .discount form button{
+    width: 120px;
+    padding: 7px ;
+    background-color: #3cb878 ;
+    border:none;
+    margin-left: 10px;
+    color: #fff;
+    
+}
+
+#brands .brand {
+    background-color: #f5f6f9;
+   width:100%;
+}
+
+
+#brands .brand ul{
+    display: flex;
+    justify-content:space-between;
+    height: 100%;
+    align-items:center;
+  
+    
+}
+#brands{
+    display: flex;
+    padding-top: 30px;
+}
+
+#brands .brand ul li a{
+    background: url(/img/brand.png) no-repeat;
+    display: block;
+    width: 120px;
+    height: 130px;
+
+
+
+ }
+
+ #brands .brand ul li:nth-child(2) a{
+    background-position: -233px;
+ }
+ #brands .brand ul li:nth-child(3) a{
+    background-position: -460px;
+ }
+ #brands .brand ul li:nth-child(4) a{
+    background-position: -690px;
+    width: 135px;
+ }
+
+
+ footer{
+     background-color: #333;
+     display: flex;
+     height: 30px;
+     color: #fff;
+     align-items: center;
+ }
+
+ .f-left{
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: #333;
+
+ }
+
+ .f-left,.f-right{
+   flex:1;
+
+ }
+
+ .f-right ul{
+    display: flex;
+    max-width: 300px;
+    width: 300px;
+    margin: 0px auto;
+    justify-content: space-between;
+ }
+
+ .f-right ul li a{
+     width: 50px;
+     height: 30px;
+     background: url(../img/payment.png) no-repeat;
+     display: block;
+ }
+
+ .f-right ul li:nth-child(2) a{
+     background-position: -60px;
+ }
+ .f-right ul li:nth-child(3) a{
+    background-position: -120px;
+}
+.f-right ul li:nth-child(4) a{
+    background-position: -180px;
+}
+.f-right ul li:nth-child(4) a{
+    background-position: -240px;
+}
+
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width:1200px){
+
+}
+@media only screen and (max-width:996px){
+    
+}
+@media only screen and (max-width:768px){
+    
+}
+@media only screen and (max-width:576px){
+    
+/* Header */    
+    header .menu{
+        display:none;
+    }
+    header .logo{
+        width: 65%;
+    }
+    header .logo a{
+        font-size:1rem;
+        display:block;
+        text-indent: 15px;
+    }
+
+    /* Slider */
+    /* #slider .slider-item img{
+        max-width:77%;
+    } */
+    #slider,#slider .slider-item{
+       
+        height: auto;
+    }
+
+    #slider .slider-item h2{
+            font-size: 0.7rem;
+            top: 45px;
+            width: 50%;
+            left:10px;
+            letter-spacing: 5px;
+    }
+
+    ul.product-list div.buy{
+        top:32px;
+        right:5px;
+    }
+
+
+    /* best-seller */
+
+    #best-seller{
+        margin-top: 15px;
+    }
+    .container ul.product-list li{
+        width: 48%;
+        margin-left: 7px;
+       
+    }
+    .container ul.product-list li img{
+        max-width: 98%;
+        margin-top: 30px;
+    }
+
+    .container ul.product-list li p{
+        max-width:80%;
+        text-align: center;
+    }
+
+     ul.product-list li.introduce{
+         width:100%;
+         align-items:center;/* column */
+     }
+
+     /* Shippinh */
+     #shipping{
+         margin-top: 20px;
+     }
+     #shipping ul{
+        flex-direction:row;
+        flex-wrap: wrap;
+     }
+     #shipping ul li {
+         width:50%;
+         
+     }
+
+     /* promotion*/
+     #promotion{
+        margin-bottom: 20px;
+     }
+
+     #promotion ul li{
+         width:25%;
+
+     }
+     
+     /* Brands */
+     #brands {
+         flex-direction: column;
+         
+         
+     }
+     
+
+     #brands .discount form button {
+         min-width: 310px;
+         margin-top:30px;
+         margin-bottom:10px;    
+        
+    }
+
+     .discount ,.brand{
+         height:auto;
+        padding-bottom: 30px;
+         width: 100%;
+     }
+    
+     .brand ul{
+         
+         flex-wrap: wrap;
+     }
+
+     .brand ul li {
+         width: 45%;
+         margin-left: 18px;
+         align-items: flex-end;
+        
+     }
+     .brand ul li a {
+         width:100%;
+     }
+     
+     /* Footer */
+     footer{
+         flex-direction: column;
+        
+     }
+     footer .div {
+         width: 100%;
+         height:50px;
+         
+     }
+
+     .f-left{
+        text-align:center;
+        padding-top: 2px;
+        padding-bottom:2px;
+    
+     }
+     .f-right{
+         margin-top: 10px
+     }
+     
+}
+@media only screen and (max-width:360px){
+    
+}
