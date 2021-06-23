@@ -409,7 +409,7 @@ margin-top: 60px;
  .f-right ul li a{
      width: 50px;
      height: 30px;
-     background: url(../img/payment.png) no-repeat;
+     background: url(./img/payment.png) no-repeat;
      display: block;
  }
 
